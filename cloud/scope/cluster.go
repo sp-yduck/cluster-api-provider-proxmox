@@ -125,6 +125,10 @@ func (s *ClusterScope) SetStorage(storage infrav1.Storage) {
 	s.ProxmoxCluster.Spec.Storage = storage
 }
 
+func (s *ClusterScope) SetLoadBalancer(loadbalancer infrav1.LoadBalancer) {
+	s.ProxmoxCluster.Spec.LoadBalancer = loadbalancer
+}
+
 // PatchObject persists the cluster configuration and status.
 func (s *ClusterScope) PatchObject() error {
 	return s.patchHelper.Patch(context.TODO(), s.ProxmoxCluster)

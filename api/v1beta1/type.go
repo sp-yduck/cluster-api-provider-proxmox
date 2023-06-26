@@ -26,6 +26,11 @@ type Storage struct {
 	Path string `json:"path,omitempty"`
 }
 
+type LoadBalancer struct {
+	// vm id
+	InstanceID int `json:"instanceID,omitempty"`
+}
+
 type InstanceStatus string
 
 var (

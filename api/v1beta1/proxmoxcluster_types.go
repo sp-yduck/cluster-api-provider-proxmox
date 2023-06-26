@@ -39,6 +39,8 @@ type ProxmoxClusterSpec struct {
 
 	// storage is for proxmox storage used by vm instances
 	Storage Storage `json:"storage"`
+
+	LoadBalancer LoadBalancer `json:"loadBalancer,omitempty"`
 }
 
 // ProxmoxClusterStatus defines the observed state of ProxmoxCluster
